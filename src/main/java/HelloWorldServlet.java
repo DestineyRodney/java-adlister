@@ -8,12 +8,27 @@ import java.io.PrintWriter;
 
 @WebServlet(name="HelloWorldServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
+    private int number = 0;
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         res.setContentType("text/html");
         String searchQuery = req.getParameter("q");
-        PrintWriter out = res.getWriter();
-        out.println("<h1>Hello, World!</h1>");
 
+        String name = req.getParameter("q");
+
+        PrintWriter out = res.getWriter();
+        out.println("<h1>Hello, " + name + "</h1>");
+
+        if  (name == null) {
+            out.println("Hello, World!");
+        }else if (name != null){
+            out.println("Hello, " + name + "!");
+        }
+
+//        counter
+        number++;
+        out.println(number);
+
+//        Lecture
         if(searchQuery != null) {
             out.println("<p>Here are your results for " + searchQuery + "</p>");
         }
