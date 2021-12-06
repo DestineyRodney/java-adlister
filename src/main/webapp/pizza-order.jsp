@@ -19,33 +19,57 @@
 
 <form action="pizza-order" method="POST">
     <div class="form-group">
-        <label for="pizzaCrust">Email address</label>
-        <input type="email" class="form-control" id="pizzaCrust" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+        <label for="pizza-crust">Pizza Crust</label>
+        <select class="form-control" name="pizza-crust" id="pizza-crust">
+            <option>Please select crust type</option>
+            <option value="hand-tossed">Hand Tossed</option>
+            <option value="thin-crust">Thin Crust</option>
+            <option  value="Pan Crust">Pan-crust</option>
+            <option value="Stuffed Crust">Stuffed Crust</option>
         </select>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlSelect2">Example multiple select</label>
-        <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+        <label for="sauce-type">Sauce Type</label>
+        <select class="form-control" name="sauce-type" id="sauce-type">
+            <option>Please choose a sauce</option>
+            <option value="Marinara">Marinara</option>
+            <option value="Alfredo">Alfredo</option>
+            <option value="Meat-sauce">Meat</option>
+            <option value="No sauce">No sauce</option>
         </select>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="size">Size</label>
+        <select class="form-control" name="size" id="size">
+            <option>Please select size</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
     </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="topping" id="cheese" value="cheese">
+        <label class="form-check-label" for="cheese">Cheese</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="topping" id="pepperoni" value="pepperoni">
+        <label class="form-check-label" for="pepperoni">Pepperoni</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="topping" id="italianSausage" value="italianSausage">
+        <label class="form-check-label" for="italianSausage">Italian Sausage </label>
+    </div>
+    <br>
+    <div>
+        <label>Delivery Address</label>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input name="address" type="text" class="form-control" id="inputAddress" placeholder="input you address">
+    </div>
+    </div>
+
+    <input type="submit">
+
 </form>
 </body>
 </html>

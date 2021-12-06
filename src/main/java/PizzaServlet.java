@@ -17,13 +17,13 @@ public class PizzaServlet extends HttpServlet {
         String pizzaSize = request.getParameter("size");
         System.out.println("size " + pizzaSize);
 
-        String pizzaCrust = request.getParameter("crust");
+        String pizzaCrust = request.getParameter("pizza-crust");
         System.out.println("crust " + pizzaCrust);
 
-        String pizzaSauce = request.getParameter("sauce");
+        String pizzaSauce = request.getParameter("sauce-type");
         System.out.println("sauce " +pizzaSauce);
 
-        String[] toppings = request.getParameterValues("toppings");
+        String[] toppings = request.getParameterValues("topping");
         for (String topping : toppings) {
             System.out.println(topping);
             System.out.println(" ");
