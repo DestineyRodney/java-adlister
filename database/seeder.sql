@@ -1,9 +1,9 @@
 USE adlister_db;
 
-INSERT INTO user (username, email, password)
-VALUES ('Douglas', 'Douglas@user.com',    'Douglas'),
-       ('Destiney',    'Destiney@user.com',    'Destiney'),
-       ('Bob',    'Bob@user.com', 'Bob');
+INSERT INTO users (username, email, password)
+VALUES ('Douglas', 'Douglas@user.com', 'Douglas'),
+       ('Destiney', 'Destiney@user.com', 'Destiney'),
+       ('Bob', 'Bob@user.com', 'Bob');
 
 INSERT INTO ads (user_id, title, description)
 VALUES (1, 'hoodie', 'White relaxed fit.'),
