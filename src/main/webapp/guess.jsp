@@ -12,6 +12,7 @@
     <%@include file="partials/head.jsp"%>
 </head>
 <body>
+<%@ include file="partials/navbar.jsp"%>
 <h1>Guess a number</h1>
 <form action="/guess" method="POST">
     <label for="number">Number</label>
