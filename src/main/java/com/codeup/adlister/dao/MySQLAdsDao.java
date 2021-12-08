@@ -1,5 +1,6 @@
 package com.codeup.adlister.dao;
 
+import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
@@ -28,9 +29,10 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public List<Ad> all() {
-        Statement stmt = null;
+        String sql = "SELECT * FROM ads";
+        PreparedStatement stmt = null;
         try {
-            stmt = connection.createStatement();
+            stmt = connection.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery("SELECT * FROM ads");
             return createAdsFromResults(rs);
         } catch (SQLException e) {
@@ -40,8 +42,9 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public Long insert(Ad ad) {
+        String query = createInsertQuery(ad);
         try {
-            Statement stmt = connection.createStatement();
+            PreparedStatement stmt = connection.prepareStatement(query);
             stmt.executeUpdate(createInsertQuery(ad), Statement.RETURN_GENERATED_KEYS);
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
