@@ -8,7 +8,12 @@ import java.util.Random;
 
 @WebServlet(name="GuessNumberServlet", urlPatterns ="/guess")
 public class GuessNumberServlet extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/guess.jsp").forward(request, response);
+    }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Random random = new Random();
         int randomNumber = random.nextInt(3) + 1;
         System.out.println("random number" + randomNumber);
@@ -17,9 +22,9 @@ public class GuessNumberServlet extends HttpServlet {
         System.out.println(number);
 
         if (number == randomNumber) {
-            response.sendRedirect("/correct");
+            response.sendRedirect("/correct.jsp");
         } else {
-            response.sendRedirect("/incorrect");
+            response.sendRedirect("/incorrect.jsp");
         }
     }
 }

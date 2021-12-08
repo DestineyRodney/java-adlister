@@ -14,7 +14,7 @@
 <body>
 <%@ include file="partials/navbar.jsp"%>
 <h1>Guess a number</h1>
-<form action="/guess" method="POST">
+<form action="guess" method="POST">
     <label for="number">Number</label>
     <input type="text" name="number" id="number" placeholder="Pick a number from 1-3">
 

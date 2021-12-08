@@ -7,12 +7,12 @@ import java.io.IOException;
 
 @WebServlet(name="NumberGuessLossServlet", urlPatterns ="/incorrect")
 public class NumberGuessLossServlet extends HttpServlet {
-    String output = "Loser";
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String outcome = "Loser";
 
-        request.getRequestDispatcher("/incorrect").forward(request, response);
-
+        request.setAttribute("outcome", outcome);
+        request.getRequestDispatcher("/guessOutcome.jsp").forward(request, response);
     }
 }
 

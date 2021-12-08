@@ -14,11 +14,11 @@
 </head>
 <body>
 <h1>What's your favorite color?</h1>
-<form method="post" action="/pickcolor">
+<form action="/pickcolor" method="POST">
 
     <label for="color">Type your favorite color</label>
     <input type="text" name="color" id="color" placeholder="What is your favorite color.">
-    <br>
+
 
     <input type="submit">
 </form>

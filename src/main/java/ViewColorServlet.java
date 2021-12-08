@@ -11,7 +11,7 @@ public class ViewColorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ServletException, IOException {
-        String color = request.getParameter("q");
+        String color = request.getParameter("color");
         request.setAttribute("color", color);    //set the attribute for the viewcolor servlet
         request.getRequestDispatcher("viewcolor.jsp").forward(request, response);
     }
