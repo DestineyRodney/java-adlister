@@ -8,6 +8,9 @@ public class Album implements Serializable {
     private double sales;
     private String genre;
 
+//    Zero argument constuctor
+    public Album(){}
+
 //constructor
     public Album(int id, String artist, String name, int releaseDate, double sales, String genre) {
         this.id = id;
