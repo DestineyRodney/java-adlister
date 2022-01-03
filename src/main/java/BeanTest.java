@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class BeanTest {
     public static void main(String[] args) {
-        ArrayList<Author> team = new ArrayList<>();
+        ArrayList<Author> home = new ArrayList<>();
         Author author = new Author();
         author.setId(5);
         author.setFirstName("Destiney");
@@ -13,10 +13,16 @@ public class BeanTest {
         author1.setFirstName("Noah");
         author1.setLastName("Boston");
 
-        team.add(author);
-        team.add(author1);
+        home.add(author);
+        home.add(author1);
 
-        for(Author name : team) {
+        Album fame = new Album();
+
+        fame.setId(3);
+        fame.setName("Chris");
+        System.out.println(fame.getName());
+
+        for(Author name : home) {
             System.out.println(name.getFirstName());
             System.out.println(name.getLastName());
         }
